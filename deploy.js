@@ -34,7 +34,11 @@ const main = async () => {
     // const sentTx = await wallet.sendTransaction(tx);
     // await sentTx.wait(6);
 
-
+    // Interacting with the contract
+    const favNum = await contract.retrieve();
+    console.log(favNum.toString());/**Big Number thing */
+    const transactionForStore = await contract.store("42");
+    const recieptForStore = await transactionForStore.wait(6);
 };
 
 
