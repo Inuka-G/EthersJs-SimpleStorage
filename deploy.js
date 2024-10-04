@@ -39,6 +39,8 @@ const main = async () => {
     console.log(favNum.toString());/**Big Number thing */
     const transactionForStore = await contract.store("42");
     const recieptForStore = await transactionForStore.wait(6);
+
+    // in transection data will be the function call
 };
 
 
